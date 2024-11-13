@@ -1,7 +1,10 @@
 export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$N_PREFIX/bin"
-export EDITOR="code"
-export N_PREFIX="$HOME/.local/share/n"
+export EDITOR="nano"
 export TERMINAL="konsole"
+export N_PREFIX="$HOME/.local/share/n"
+
+# sadly to make this line work, this file *cannot* be placed outside the home directory
+export ZDOTDIR="$HOME/.zsh"
 
 # dont remember what this does tbh
 export LIBGL_ALWAYS_INDIRECT=0
@@ -26,8 +29,8 @@ alias uwu="clear && uwufetch"
 alias :3="echo ':3'"
 
 # actually useful shit goes here
+alias arch-update-poweroff="sudo pacman -Syu --noconfirm ; sleep 0.1 ; echo -e '\n${bold}System updates complete.${normal}\n' ; sleep 3 ; yay --noconfirm ; sleep 0.1 ; echo -e '\n${bold}AUR updates complete.${normal}\n' ; sleep 3 ; echo -e '\n${GREEN}${bold}All updates complete. Powering off now...${TEXT}${normal}\n' ; sleep 5 ; systemctl poweroff"
 alias c='clear'
-alias cdc='cd && clear'
 alias cl='clear && ls -al'
 alias closedc="echo 'Closing Discord...' ; pkill -f discord"
 alias cnode='clear && node'
@@ -42,6 +45,4 @@ alias pwease="sudo"
 alias sysrq="cat /proc/sys/kernel/sysrq"
 alias sysrq1="echo '1' | sudo tee /proc/sys/kernel/sysrq"
 alias vencordinstall="sh ~/.config/sh/vencordinstall.sh"
-alias update="sudo pacman -Syu"
-alias update-mirrors="sudo clear ; sudo reflector --latest 200 --protocol https --sort rate --country US --save /etc/pacman.d/mirrorlist --verbose"
-alias updatepoweroff="sudo pacman -Syu --noconfirm ; sleep 0.1 ; echo -e '\n${bold}System updates complete.${normal}\n' ; sleep 3 ; yay --noconfirm ; sleep 0.1 ; echo -e '\n${bold}AUR updates complete.${normal}\n' ; sleep 3 ; echo -e '\n${GREEN}${bold}All updates complete. Powering off now...${TEXT}${normal}\n' ; sleep 5 ; systemctl poweroff"
+alias update-arch-mirrors="sudo clear ; sudo reflector --latest 200 --protocol https --sort rate --country US --save /etc/pacman.d/mirrorlist --verbose"
