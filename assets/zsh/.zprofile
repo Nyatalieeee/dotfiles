@@ -1,1 +1,1 @@
-echo "the fuck do i even put here" > /dev/null
+echo "hi i still dunno what to do here" > /dev/null

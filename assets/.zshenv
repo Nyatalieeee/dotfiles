@@ -1,47 +1,30 @@
 export PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$N_PREFIX/bin"
 export EDITOR="nano"
+export VISUAL="nano"
 export TERMINAL="konsole"
 export N_PREFIX="$HOME/.local/share/n"
 
-# sadly to make this line work, this file *cannot* be placed outside the home directory
+### XDG
+
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
+export XDG_BIN_HOME=$HOME/.local/bin
+export XDG_TRASH_HOME=$XDG_DATA_HOME/Trash
+
+### /XDG
+
+### ZSH
+
 export ZDOTDIR="$HOME/.zsh"
+export HISTFILE="$ZDOTDIR/.zhistory"
+export HISTSIZE=6900 # max 10000
 
-# dont remember what this does tbh
-export LIBGL_ALWAYS_INDIRECT=0
+# |-----------------------------------------------------------|
+# | NOTE: $ZDOTDIR must be defined in this file, which means  |
+# | this file cannot be placed outside the home directory.    |
+# |-----------------------------------------------------------|
 
-WHITE="\033[37m"
-GREEN="\033[32m"
-PINK="\033[35m"
-TEXT="\033[0;39m"
+### /ZSH
 
-bold=$(tput bold)
-normal=$(tput sgr0)
-
-# random aliases
-alias ff='clear && fastfetch -c ~/.config/fastfetch.jsonc'
-alias gae='clear && hyfetch'
-alias meow='cat ~/documents/meow.txt'
-alias neofetch='clear && neofetch'
-alias nf='clear && neofetch'
-alias pwease='sudo'
-alias snf='sudo clear && sudo neofetch'
-alias uwu="clear && uwufetch"
-alias :3="echo ':3'"
-
-# actually useful shit goes here
-alias arch-update-poweroff="sudo pacman -Syu --noconfirm ; sleep 0.1 ; echo -e '\n${bold}System updates complete.${normal}\n' ; sleep 3 ; yay --noconfirm ; sleep 0.1 ; echo -e '\n${bold}AUR updates complete.${normal}\n' ; sleep 3 ; echo -e '\n${GREEN}${bold}All updates complete. Powering off now...${TEXT}${normal}\n' ; sleep 5 ; systemctl poweroff"
-alias c='clear'
-alias cl='clear && ls -al'
-alias closedc="echo 'Closing Discord...' ; pkill -f discord"
-alias cnode='clear && node'
-alias c3init='node ~/projects/colon3-bot/src/index.js'
-alias e='exit'
-alias gp='git pull --rebase'
-alias l="ls -al"
-alias natalie="btm && echo 🥺"
-alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
-alias pubip="curl https://ipv4.icanhazip.com"
-alias pwease="sudo"
-alias sysrq="cat /proc/sys/kernel/sysrq"
-alias sysrq1="echo '1' | sudo tee /proc/sys/kernel/sysrq"
-alias update-arch-mirrors="sudo clear ; sudo reflector --latest 200 --protocol https --sort rate --country US --save /etc/pacman.d/mirrorlist --verbose"
