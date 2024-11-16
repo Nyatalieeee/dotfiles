@@ -1,4 +1,4 @@
-source ~/.zsh/.aliases.zsh
+source $ZDOTDIR/.aliases.zsh
 
 # initialize starship
 eval "$(starship init zsh)"
