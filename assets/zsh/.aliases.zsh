@@ -10,9 +10,13 @@ alias cl='clear && ls -al'
 alias cnode='clear && node'
 alias e='exit'
 alias gp='git pull --rebase'
-alias l="ls -al"
+alias l='ls -al'
 alias playing="playerctl metadata --format '{{artist}} - {{ title}}'"
-alias pubip="curl https://ipv4.icanhazip.com"
-alias pwease="sudo"
-alias sysrq="cat /proc/sys/kernel/sysrq"
+alias pubip='curl https://ipv4.icanhazip.com'
+alias pwease='sudo'
+alias sysrq='cat /proc/sys/kernel/sysrq'
 alias set-sysrq="echo '1' | sudo tee /proc/sys/kernel/sysrq"
+
+alias whatami='hostname'
+alias whereami='pwd'
+alias whenami='date'
