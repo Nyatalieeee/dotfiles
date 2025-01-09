@@ -3,6 +3,7 @@ export EDITOR="nano"
 export VISUAL="nano"
 export TERMINAL="konsole"
 export N_PREFIX="$HOME/.local/share/n"
+export PROJECT_DIR="$HOME/projects"
 
 ### XDG
 

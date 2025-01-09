@@ -19,4 +19,5 @@ alias set-sysrq="echo '1' | sudo tee /proc/sys/kernel/sysrq"
 
 alias whatami='hostname'
 alias whereami='pwd'
-alias whenami='date'
+alias whenami='timedatectl'
+alias whyami="echo -e '\e[3m$USER is having an existential crisis.\e[0m'"
