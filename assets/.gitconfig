@@ -1,7 +1,7 @@
 [user]
 	email = nyatalieeee@proton.me
-	name = Natalie Raine
-	signingKey = /home/natalie/.ssh/id_ed25519
+	name = Marceline Raine
+	signingKey = /home/marceline/.ssh/id_ed25519
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
