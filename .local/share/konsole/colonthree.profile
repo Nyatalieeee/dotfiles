@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Catppuccin-Macchiato
-Font=JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=JetBrainsMono Nerd Font,10,-1,5,700,0,0,0,0,0,0,0,0,0,0,1,Bold
 
 [Cursor Options]
 CursorShape=2
