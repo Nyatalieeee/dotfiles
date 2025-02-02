@@ -1,7 +1,7 @@
 [user]
 	email = meowcelinee@proton.me
 	name = Marceline Raine
-	signingKey = /home/m/.ssh/id_ed25519
+	signingKey = $HOME/.ssh/id_ed25519
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
